@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!--database mapping-->
+        <property name="hibernate.connection.url">jdbc:postgresql://postgresdb-2.covp8j1urmzv.us-east-2.rds.amazonaws.com:9999/project0</property>
+        <property name="hibernate.connection.username">mpaustin13</property>
+        <property name="hibernate.connection.password">Playmaker42</property>
+        <!--driver mapping-->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+        <!--pretty SQL-->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!--class mappings-->
+        <mapping class="org.mpa.entities.User" />
+        <mapping class="org.mpa.entities.Workout" />
+    </session-factory>
+</hibernate-configuration>
